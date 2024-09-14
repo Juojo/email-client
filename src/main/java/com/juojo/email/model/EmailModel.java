@@ -7,30 +7,30 @@ public class EmailModel {
 
 	@NotNull
 	@Email
-	private String to, from;
+	private String from, to;
 	
 	private String subject, body;
 	
-	public EmailModel(String to, String from, String subject, String body) {
-		this.to = to;
+	public EmailModel(String from, String to, String subject, String body) {		
 		this.from = from;
+		this.to = to;
 		this.subject = subject;
 		this.body = body;
 	}
 
-	public String getUsername() {
-		return to;
-	}
-
-	public String getDomainName() {
+	public String getFrom() {
 		return from;
+	}
+	
+	public String getTo() {
+		return to;
 	}
 
 	public String getSubject() {
 		return subject;
 	}
 
-	public String getContent() {
+	public String getBody() {
 		return body;
 	}		
 	
