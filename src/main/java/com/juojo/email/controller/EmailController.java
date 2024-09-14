@@ -1,5 +1,6 @@
 package com.juojo.email.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ import com.juojo.email.service.EmailService;
 @RequestMapping("/api")
 public class EmailController {
 	
-	private EmailService emailService = new EmailService();
+	@Autowired private EmailService emailService;
 
 	public EmailController() {
 		
